@@ -99,6 +99,11 @@ go run main.go
 Server local akan berjalan di `http://localhost:8080`.
 Server production akan berjalan di `https://quiz-project-book-api-production.up.railway.app`.
 
+### 5. Testing
+| username | password |
+| ---------|----------|
+| admin    | test1234 |
+
 ---
 
 ## 🔑 Autentikasi
