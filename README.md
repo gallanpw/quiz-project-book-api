@@ -96,7 +96,7 @@ Jalankan perintah berikut untuk mengunduh semua dependencies dan menjalankan ser
 go mod tidy
 go run main.go
 ```
-Server local akan berjalan di `http://localhost:8080`.
+Server local akan berjalan di `http://localhost:8080`. <br>
 Server production akan berjalan di `https://quiz-project-book-api-production.up.railway.app`.
 
 ### 5. Testing
@@ -117,10 +117,11 @@ POST	/api/users/login   Otentikasi: Mengambil token JWT.
 POST	/api/users/logout  Memasukkan token ke daftar hitam (blacklist) untuk logout.
 ``` -->
 
-| Method | Path                | Deskripsi |
-|--------|---------------------|-----------|
-| `POST` | `/api/users/login`  | Otentikasi: Mengambil token JWT.|
-| `POST` | `/api/users/logout` | Memasukkan token ke daftar hitam (blacklist) untuk logout. |
+| Method | Path                  | Deskripsi |
+|--------|-----------------------|-----------|
+| `POST` | `/api/users/login`    | Otentikasi: Mengambil token JWT. |
+| `POST` | `/api/users/register` | Menambahkan username dan password baru ke database |
+| `POST` | `/api/users/logout`   | Memasukkan token ke daftar hitam (blacklist) untuk logout. |
 
 ---
 
@@ -135,7 +136,7 @@ Mengelola data kategori buku. Semua endpoint memerlukan token JWT.
 | `POST`   | `/api/categories`           | Menambahkan kategori baru. |
 | `GET`    | `/api/categories/:id`       | Menampilkan detail kategori berdasarkan ID. |
 | `PUT`    | `/api/categories/:id`       | Memperbarui data kategori berdasarkan ID. |
-| `DELETE` | `/api/categories/:id`       | Soft Delete: Menghapus kategori secara logis. |
+| `DELETE` | `/api/categories/:id`       | **Soft Delete**: Menghapus kategori secara logis. |
 | `GET`    | `/api/categories/:id/books` | Menampilkan buku berdasarkan kategori tertentu. |
 
 ### 📖 API Buku (`/api/books`)
