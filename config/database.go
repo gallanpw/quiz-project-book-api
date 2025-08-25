@@ -15,7 +15,8 @@ var DB *sql.DB
 func ConnectDB() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loading .env file")
+		// log.Fatal("Error loading .env file")
+		log.Println("Error loading .env file. Assuming environment variables are set in Railway.")
 	}
 
 	dbHost := os.Getenv("DB_HOST")
@@ -30,12 +31,14 @@ func ConnectDB() {
 
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
-		log.Fatal(err)
+		// log.Fatal(err)
+		panic(err)
 	}
 
 	err = db.Ping()
 	if err != nil {
-		log.Fatal(err)
+		// log.Fatal(err)
+		panic(err)
 	}
 
 	DB = db
