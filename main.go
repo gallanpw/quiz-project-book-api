@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"quiz-project-book-api/config"
 	"quiz-project-book-api/routes"
 
@@ -18,5 +20,10 @@ func main() {
 	routes.SetupRoutes(r)
 
 	// Jalankan server
-	r.Run(":8080")
+	// r.Run(":8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	r.Run(":" + port)
 }
