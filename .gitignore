@@ -1,0 +1,17 @@
+# If you prefer the allow list template instead of the deny list, see community template:
+# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
+
+# Abaikan file biner dengan nama yang sama dengan nama direktori induknya
+# Misalnya, akan mengabaikan file "formative-2" di dalam direktori "formative-2"
+*/formative-*/formative-*
+quiz-project-book-api
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+
+# dotenv environment variable files
+.env
+
+# ds_store files
+.DS_Store
